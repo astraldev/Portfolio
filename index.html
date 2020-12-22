@@ -3,19 +3,67 @@
 <!--Comment in HTML            -->
 <!--Use MDB bootstrap           -->
 <!--Check for changes in file      -->
+
 <head>
     <title>AstralDev</title>
-    <link href="style.css" rel="stylesheet" />
     <meta charset="utf-8" />
-    <link href="css/bootstrap.css"
-          rel="stylesheet" />
+    <style>
+        body{
+            background-image: url("img/bkg3.jpg");
+        }
+        .container .cont-header {
+            font-size: 20px;
+        }
+
+        h1.name{
+            color: #fff;
+            text-align: center;
+        }
+
+        .nav.nav-tabs li{
+            width: 32%;
+            border-bottom: none;
+        }
+        .nav.nav-tabs li a{
+            text-align: center;
+            color: #fff;
+            border-bottom: none;
+            background-color: transparent;
+        }
+        .nav.nav-tabs li a:hover, 
+        .nav.nav-tabs li.active a:hover{
+            background: none;
+            color: #fff;
+        }
+        .nav.nav-tabs li:hover{
+            width: 33%;
+        }
+        .nav.nav-tabs li.active a{
+            background: none;
+            color: #fff;
+        }
+        .body {
+            color: #fff;
+        }
+
+        .panel {
+            color: #000;
+        }
+
+        .lg {
+            font-size: medium;
+            color: #fff;
+        }
+    </style>
+    <link href="css/bootstrap.css" rel="stylesheet" />
 </head>
+
 <body>
-    <div class="body">
-        <h1>AstralDev</h1>
+    <div class="container">
+        <h1 class="name">AstralDev</h1>
         <div class="header">
             <div class="nav">
-                <ul class="nav nav-tabs nav-justified">
+                <ul class="nav nav-tabs">
                     <li class="active">
                         <a href="#">Home</a>
                     </li>
@@ -28,15 +76,25 @@
                 </ul>
             </div>
         </div>
-        <div class="body">
-            My name is AstralDev i am an application developer and also
-            a client-side web developer. I became intrested in developing
-            and programming at the age of 13 since then it has become a passion.
-            <div class="container">
-                <div class="cont-header">
+        <div>
+            <div class="page-header lg">Home</div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        About me
+                    </div>
+                </div>
+                <div class="panel-body">
+                    My name is AstralDev i am an application developer and also
+                    a client-side web developer. I became intrested in developing
+                    and programming at the age of 13 since then it has become a passion.
+                </div>
+            </div>
+            <div>
+                <div class="page-header lg">
                     Projects
                 </div>
-                <div class="panel panel-info">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="panel-title">
                             PyEdit
@@ -44,8 +102,7 @@
                     </div>
                     <div class="panel-body">
                         <div class="img">
-                            <img alt="PyEdit"
-                                 src="./img/pyedit.png" />
+                            <img alt="PyEdit" src="./img/pyedit.png" />
                         </div>Simple
                         <a href="#">Gtk</a> python
                         editor which features a terminal, a python console and IPython
@@ -56,7 +113,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="panel panel-info">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="panel-title">
                             Niceprint
@@ -66,13 +123,25 @@
                         It is a simple python module that prints the inputed words letter
                         by letter with a given color. It is available on PyPi.
                         Click
-                        <a href="#">here</a> for more info
+                        <a href="#">
+                            here
+                        </a> for more info
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery.js" ></script>
     <script src="jquery.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script>
+        if (window.screen.height < 600) {
+            $("ul.nav").removeClass("nav-justified")
+            $("ul.nav").addClass("nav-tabs-justified")
+            $("ul.nav").removeClass("nav-tabs")
+            $("ul.nav").addClass("nav-pills")
+        }
+    </script>
 </body>
+
 </html>
